@@ -48,20 +48,20 @@ export default function Hero() {
       className="relative flex flex-col overflow-hidden bg-[#0A0906] md:min-h-[100dvh]"
     >
 
-      {/* ── MOBILE ONLY: tall portrait image ── */}
-      <div className="relative md:hidden w-full overflow-hidden" style={{ height: "62vh" }}>
-        <Image
-          src="/paulo-picture/hero-section-paulo.JPEG"
-          alt="Pastor Paulo Oliveira"
-          fill
-          priority
-          className="object-cover object-[center_12%]"
-          sizes="100vw"
-        />
-        {/* Top fade — merges with navbar */}
-        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[rgba(10,9,6,0.55)] to-transparent" />
-        {/* Bottom fade — merges into dark content below */}
-        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#0A0906] via-[rgba(10,9,6,0.7)] to-transparent" />
+      {/* ── MOBILE ONLY: centered portrait card ── */}
+      <div className="md:hidden w-full px-4 pt-24 pb-2">
+        <div className="relative w-full overflow-hidden rounded-3xl" style={{ height: "58vh" }}>
+          <Image
+            src="/paulo-picture/hero-section-paulo.JPEG"
+            alt="Pastor Paulo Oliveira"
+            fill
+            priority
+            className="object-cover object-[center_12%]"
+            sizes="100vw"
+          />
+          {/* Bottom fade — merges into dark content below */}
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[rgba(10,9,6,0.85)] to-transparent" />
+        </div>
       </div>
 
       {/* ── DESKTOP ONLY: parallax background ── */}
@@ -91,14 +91,14 @@ export default function Hero() {
             <div className="max-w-[820px]">
 
               {/* Eyebrow */}
-              <div className="hero-eyebrow mb-5 md:mb-7">
+              <div className="hero-eyebrow mb-5 md:mb-7 text-center md:text-left">
                 <span className="text-[#C4903A] text-[10px] font-medium tracking-[0.34em] uppercase">
                   {siteData.hero.eyebrow}
                 </span>
               </div>
 
               {/* Headline */}
-              <h1 className="mb-6 md:mb-9">
+              <h1 className="mb-6 md:mb-9 text-center md:text-left">
                 {siteData.hero.headlineParts.map((part, i) => (
                   <div key={i} className="overflow-hidden" style={{ paddingBottom: "0.04em" }}>
                     <div className="hero-line font-display text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.02] tracking-[-0.04em] text-[#F5F0E8]">
@@ -115,7 +115,7 @@ export default function Hero() {
 
               {/* Subtext + CTAs */}
               <div
-                className="hero-sub rounded-[1.5rem] px-6 py-6 md:px-9 md:py-8 max-w-[520px]"
+                className="hero-sub rounded-[1.5rem] px-6 py-6 md:px-9 md:py-8 max-w-[520px] mx-auto md:mx-0"
                 style={{
                   background: "rgba(10,9,6,0.52)",
                   backdropFilter: "blur(20px) saturate(160%)",
@@ -123,10 +123,10 @@ export default function Hero() {
                   border: "1px solid rgba(196,144,58,0.14)",
                 }}
               >
-                <p className="text-[rgba(245,240,232,0.72)] text-sm md:text-[17px] leading-relaxed mb-6 md:mb-8">
+                <p className="text-[rgba(245,240,232,0.72)] text-sm md:text-[17px] leading-relaxed mb-6 md:mb-8 text-center md:text-left">
                   {siteData.hero.subtext}
                 </p>
-                <div className="flex flex-wrap items-center gap-4 md:gap-5">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-5">
                   <a
                     href="https://tally.so/r/Ek0VyA"
                     target="_blank"
