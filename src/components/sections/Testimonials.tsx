@@ -6,7 +6,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function Testimonials() {
   return (
-    <section id="contato" className="bg-[#F5F0E8] py-24 lg:py-32">
+    <section className="bg-[#F5F0E8] py-24 lg:py-32">
       <div className="max-w-[88rem] mx-auto px-6">
 
         {/* Header */}

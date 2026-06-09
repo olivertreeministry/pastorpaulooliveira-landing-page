@@ -8,7 +8,7 @@ export default function Identity() {
   const { identity } = siteData;
 
   return (
-    <section className="relative bg-[#0D0B08] py-24 lg:py-32 overflow-hidden">
+    <section id="caminho" className="relative bg-[#0D0B08] py-24 lg:py-32 overflow-hidden">
       {/* Subtle ambient glow */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"

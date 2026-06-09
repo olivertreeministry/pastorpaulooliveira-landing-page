@@ -8,8 +8,9 @@ export const siteData = {
   nav: {
     links: [
       { label: "Sobre", href: "#sobre" },
-      { label: "Mentoria", href: "#mentoria" },
       { label: "Ensinamentos", href: "#ensinamentos" },
+      { label: "Caminho", href: "#caminho" },
+      { label: "Mentoria", href: "#mentoria" },
       { label: "Contato", href: "#contato" },
     ],
     cta: { label: "Acessar Mentoria", href: "https://tally.so/r/Ek0VyA" },
@@ -211,6 +212,6 @@ export const siteData = {
       { label: "Privacidade", href: "#" },
       { label: "Termos", href: "#" },
     ],
-    copyright: "2024 Oliver Tree Ministry.",
+    copyright: "2026 Oliver Tree Ministry.",
   },
 };

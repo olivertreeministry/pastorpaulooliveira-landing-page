@@ -8,7 +8,7 @@ export default function FinalCTA() {
   const { finalCTA } = siteData;
 
   return (
-    <section className="relative py-24 lg:py-32 bg-[#0D0B08] overflow-hidden">
+    <section id="contato" className="relative py-24 lg:py-32 bg-[#0D0B08] overflow-hidden">
       {/* Ambient glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full pointer-events-none opacity-[0.05]"
