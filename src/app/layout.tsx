@@ -26,7 +26,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Paulo Oliveira | Oliver Tree Ministry",
+  title: "Pr. Paulo Oliveira | Oliver Tree Ministry",
   description:
     "Pastor, mentor e lider espiritual. Restaurando identidades, fortalecendo familias e desenvolvendo homens e mulheres que vivem com proposito, carater e fe pratica.",
   icons: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     apple: "/logo-oliver-tree/olive-tree.png",
   },
   openGraph: {
-    title: "Paulo Oliveira | Oliver Tree Ministry",
+    title: "Pr. Paulo Oliveira | Oliver Tree Ministry",
     description:
       "Restaurando identidades, fortalecendo familias, transformando geracoes.",
     type: "website",
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
         url: "/url-cover/main-url-cover.png",
         width: 1200,
         height: 630,
-        alt: "Paulo Oliveira | Oliver Tree Ministry",
+        alt: "Pr. Paulo Oliveira | Oliver Tree Ministry",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paulo Oliveira | Oliver Tree Ministry",
+    title: "Pr. Paulo Oliveira | Oliver Tree Ministry",
     description:
       "Restaurando identidades, fortalecendo familias, transformando geracoes.",
     images: ["/url-cover/main-url-cover.png"],

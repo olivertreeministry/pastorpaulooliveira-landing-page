@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "godaddy": {
+      "type": "http",
+      "url": "https://api.godaddy.com/v1/domains/mcp",
+      "headers": {
+        "Authorization": "sso-key $GODADDY_API_KEY:$GODADDY_API_SECRET"
+      }
+    }
+  }
+}
