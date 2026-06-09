@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0A0906;
+  --color-bg-elevated: #14110E;
+  --color-cream: #F5F0E8;
+  --color-amber: #C4903A;
+  --color-amber-light: #D4A84A;
+
+  --font-display: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #0A0906;
+    color: #F5F0E8;
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(196, 144, 58, 0.28);
+    color: #F5F0E8;
+  }
+}
+
+@layer components {
+  /* Liquid glass - base variant */
+  .glass {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 20px 60px rgba(0, 0, 0, 0.35);
+  }
+
+  .glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.20) 0%,
+      rgba(255, 255, 255, 0.06) 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.04) 75%,
+      rgba(255, 255, 255, 0.14) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Liquid glass - strong variant (for CTAs and featured cards) */
+  .glass-strong {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      4px 4px 20px rgba(0, 0, 0, 0.25),
+      0 30px 80px rgba(0, 0, 0, 0.45);
+  }
+
+  .glass-strong::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.30) 0%,
+      rgba(255, 255, 255, 0.10) 20%,
+      transparent 42%,
+      transparent 58%,
+      rgba(255, 255, 255, 0.08) 80%,
+      rgba(255, 255, 255, 0.24) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Amber tinted glass (for accent CTAs) */
+  .glass-amber {
+    position: relative;
+    overflow: hidden;
+    background: rgba(196, 144, 58, 0.08);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(196, 144, 58, 0.22);
+    box-shadow:
+      inset 0 1px 0 rgba(196, 144, 58, 0.22),
+      0 20px 60px rgba(196, 144, 58, 0.08);
+  }
+
+  .glass-amber::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.2px;
+    background: linear-gradient(
+      170deg,
+      rgba(196, 144, 58, 0.45) 0%,
+      rgba(196, 144, 58, 0.14) 30%,
+      transparent 55%,
+      rgba(196, 144, 58, 0.10) 80%,
+      rgba(196, 144, 58, 0.30) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Dark glass for elevated surfaces */
+  .glass-dark {
+    position: relative;
+    overflow: hidden;
+    background: rgba(10, 9, 6, 0.7);
+    backdrop-filter: blur(24px) saturate(120%);
+    -webkit-backdrop-filter: blur(24px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 16px 48px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.04) 40%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Display font shorthand — Inter Tight */
+  .font-display {
+    font-family: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Serif accent — Playfair Display, used only for italic emphasis words */
+  .font-serif {
+    font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
+  }
+}
+
+@layer utilities {
+  .text-cream {
+    color: #F5F0E8;
+  }
+
+  .text-cream\/80 {
+    color: rgba(245, 240, 232, 0.8);
+  }
+
+  .text-cream\/60 {
+    color: rgba(245, 240, 232, 0.6);
+  }
+
+  .text-cream\/40 {
+    color: rgba(245, 240, 232, 0.4);
+  }
+
+  .text-amber-warm {
+    color: #C4903A;
+  }
+
+  .bg-amber-warm {
+    background-color: #C4903A;
+  }
+}
+
+/* Keyframe animations */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes ambient-shift {
+  0%, 100% {
+    opacity: 0.04;
+    transform: scale(1) translate(0, 0);
+  }
+  33% {
+    opacity: 0.06;
+    transform: scale(1.1) translate(-3%, 3%);
+  }
+  66% {
+    opacity: 0.03;
+    transform: scale(0.95) translate(3%, -2%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Amber gradient text — used for key accent words on any bg */
+.text-amber-gradient {
+  background-image: linear-gradient(120deg, #D4A84A 0%, #C4903A 52%, #A87B2A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Scroll reveal base state (set by Reveal.tsx via GSAP, reset here for motion preference) */
+[data-reveal] {
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Reduced transparency fallback */
+@media (prefers-reduced-transparency: reduce) {
+  .glass,
+  .glass-strong,
+  .glass-amber,
+  .glass-dark {
+    background: rgba(20, 17, 14, 0.97) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
