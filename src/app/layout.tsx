@@ -26,6 +26,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pastorpaulooliveira.com"),
   title: "Pr. Paulo Oliveira | Oliver Tree Ministry",
   description:
     "Pastor, mentor e lider espiritual. Restaurando identidades, fortalecendo familias e desenvolvendo homens e mulheres que vivem com proposito, carater e fe pratica.",
